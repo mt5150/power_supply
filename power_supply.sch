@@ -1,0 +1,634 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	4000 3700 4650 3700
+Wire Wire Line
+	4000 4000 4000 4600
+Wire Wire Line
+	4000 4600 4650 4600
+Wire Wire Line
+	4000 2450 4650 2450
+$Comp
+L Connector_Generic:Conn_01x01 J14
+U 1 1 604E06E9
+P 2350 3800
+F 0 "J14" H 2268 3575 50  0000 C CNN
+F 1 "Conn_01x01" H 2268 3666 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 2350 3800 50  0001 C CNN
+F 3 "~" H 2350 3800 50  0001 C CNN
+	1    2350 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J13
+U 1 1 604E0B01
+P 2350 3400
+F 0 "J13" H 2268 3175 50  0000 C CNN
+F 1 "Conn_01x01" H 2268 3266 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 2350 3400 50  0001 C CNN
+F 3 "~" H 2350 3400 50  0001 C CNN
+	1    2350 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode_Bridge:ABS2 D1
+U 1 1 6049F9BB
+P 4650 2800
+F 0 "D1" H 4994 2846 50  0000 L CNN
+F 1 "ABS2" H 4994 2755 50  0000 L CNN
+F 2 "Diode_SMD:Diode_Bridge_Diotec_ABS" H 4800 2925 50  0001 L CNN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/abs2.pdf" H 4650 2800 50  0001 C CNN
+	1    4650 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 3700 4650 3900
+Wire Wire Line
+	4650 2450 4650 2500
+Wire Wire Line
+	4650 4500 4650 4600
+Wire Wire Line
+	4200 4200 4350 4200
+$Comp
+L Device:CP C4
+U 1 1 604B8318
+P 5350 4550
+F 0 "C4" H 5468 4596 50  0000 L CNN
+F 1 "2200uF" H 5468 4505 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 5388 4400 50  0001 C CNN
+F 3 "~" H 5350 4550 50  0001 C CNN
+	1    5350 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 4200 7050 4200
+Connection ~ 6600 4900
+$Comp
+L Regulator_Linear:LM7812_TO220 U2
+U 1 1 604B8300
+P 6600 4200
+F 0 "U2" H 6600 4442 50  0000 C CNN
+F 1 "LM7812_D2PAK" H 6600 4351 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-2" H 6600 4425 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 6600 4150 50  0001 C CNN
+	1    6600 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 604B82FA
+P 7050 4550
+F 0 "C6" H 7165 4596 50  0000 L CNN
+F 1 "100nF" H 7165 4505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7088 4400 50  0001 C CNN
+F 3 "~" H 7050 4550 50  0001 C CNN
+	1    7050 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 604B82F4
+P 5850 4550
+F 0 "C5" H 5965 4596 50  0000 L CNN
+F 1 "330nF" H 5965 4505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5888 4400 50  0001 C CNN
+F 3 "~" H 5850 4550 50  0001 C CNN
+	1    5850 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM7812_TO220 U1
+U 1 1 604A3BE8
+P 6600 2800
+F 0 "U1" H 6600 3042 50  0000 C CNN
+F 1 "LM7812_D2PAK" H 6600 2951 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-2" H 6600 3025 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 6600 2750 50  0001 C CNN
+	1    6600 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 3450 7050 3450
+Connection ~ 6600 3450
+Wire Wire Line
+	6900 2800 7050 2800
+Wire Wire Line
+	6300 2800 6200 2800
+$Comp
+L Device:C C3
+U 1 1 604E5ED4
+P 7050 3100
+F 0 "C3" H 7165 3146 50  0000 L CNN
+F 1 "100nF" H 7165 3055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7088 2950 50  0001 C CNN
+F 3 "~" H 7050 3100 50  0001 C CNN
+	1    7050 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 604E5ECE
+P 5850 3100
+F 0 "C2" H 5965 3146 50  0000 L CNN
+F 1 "330nF" H 5965 3055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5888 2950 50  0001 C CNN
+F 3 "~" H 5850 3100 50  0001 C CNN
+	1    5850 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 604E5EEB
+P 5350 3100
+F 0 "C1" H 5468 3146 50  0000 L CNN
+F 1 "2200uF" H 5468 3055 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 5388 2950 50  0001 C CNN
+F 3 "~" H 5350 3100 50  0001 C CNN
+	1    5350 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J1
+U 1 1 6050E91E
+P 9050 2600
+F 0 "J1" H 8968 2375 50  0000 C CNN
+F 1 "Conn_01x01" H 8968 2466 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9050 2600 50  0001 C CNN
+F 3 "~" H 9050 2600 50  0001 C CNN
+	1    9050 2600
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9050 2800
+Wire Wire Line
+	9050 2800 9700 2800
+$Comp
+L Connector_Generic:Conn_01x01 J2
+U 1 1 6050F390
+P 9700 2600
+F 0 "J2" H 9618 2375 50  0000 C CNN
+F 1 "Conn_01x01" H 9618 2466 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9700 2600 50  0001 C CNN
+F 3 "~" H 9700 2600 50  0001 C CNN
+	1    9700 2600
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9700 2800
+Wire Wire Line
+	9700 2800 10350 2800
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 6050F87C
+P 10350 2600
+F 0 "J3" H 10268 2375 50  0000 C CNN
+F 1 "Conn_01x01" H 10268 2466 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 10350 2600 50  0001 C CNN
+F 3 "~" H 10350 2600 50  0001 C CNN
+	1    10350 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J4
+U 1 1 6050FBAE
+P 9050 3650
+F 0 "J4" H 8968 3425 50  0000 C CNN
+F 1 "Conn_01x01" H 8968 3516 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9050 3650 50  0001 C CNN
+F 3 "~" H 9050 3650 50  0001 C CNN
+	1    9050 3650
+	0    1    1    0   
+$EndComp
+Connection ~ 9050 3450
+Wire Wire Line
+	9050 3450 9700 3450
+$Comp
+L Connector_Generic:Conn_01x01 J5
+U 1 1 60510246
+P 9700 3650
+F 0 "J5" H 9618 3425 50  0000 C CNN
+F 1 "Conn_01x01" H 9618 3516 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9700 3650 50  0001 C CNN
+F 3 "~" H 9700 3650 50  0001 C CNN
+	1    9700 3650
+	0    1    1    0   
+$EndComp
+Connection ~ 9700 3450
+Wire Wire Line
+	9700 3450 10350 3450
+$Comp
+L Connector_Generic:Conn_01x01 J6
+U 1 1 60510635
+P 10350 3650
+F 0 "J6" H 10268 3425 50  0000 C CNN
+F 1 "Conn_01x01" H 10268 3516 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 10350 3650 50  0001 C CNN
+F 3 "~" H 10350 3650 50  0001 C CNN
+	1    10350 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J12
+U 1 1 60510917
+P 10350 5100
+F 0 "J12" H 10268 4875 50  0000 C CNN
+F 1 "Conn_01x01" H 10268 4966 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 10350 5100 50  0001 C CNN
+F 3 "~" H 10350 5100 50  0001 C CNN
+	1    10350 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J11
+U 1 1 60510D12
+P 9700 5100
+F 0 "J11" H 9618 4875 50  0000 C CNN
+F 1 "Conn_01x01" H 9618 4966 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9700 5100 50  0001 C CNN
+F 3 "~" H 9700 5100 50  0001 C CNN
+	1    9700 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J10
+U 1 1 60511138
+P 9050 5100
+F 0 "J10" H 8968 4875 50  0000 C CNN
+F 1 "Conn_01x01" H 8968 4966 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9050 5100 50  0001 C CNN
+F 3 "~" H 9050 5100 50  0001 C CNN
+	1    9050 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J7
+U 1 1 60511492
+P 9050 4000
+F 0 "J7" H 8968 3775 50  0000 C CNN
+F 1 "Conn_01x01" H 8968 3866 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9050 4000 50  0001 C CNN
+F 3 "~" H 9050 4000 50  0001 C CNN
+	1    9050 4000
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9050 4200
+Wire Wire Line
+	9050 4200 9700 4200
+$Comp
+L Connector_Generic:Conn_01x01 J8
+U 1 1 605118BE
+P 9700 4000
+F 0 "J8" H 9618 3775 50  0000 C CNN
+F 1 "Conn_01x01" H 9618 3866 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9700 4000 50  0001 C CNN
+F 3 "~" H 9700 4000 50  0001 C CNN
+	1    9700 4000
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9700 4200
+Wire Wire Line
+	9700 4200 10350 4200
+$Comp
+L Connector_Generic:Conn_01x01 J9
+U 1 1 60511B4C
+P 10350 4000
+F 0 "J9" H 10268 3775 50  0000 C CNN
+F 1 "Conn_01x01" H 10268 3866 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 10350 4000 50  0001 C CNN
+F 3 "~" H 10350 4000 50  0001 C CNN
+	1    10350 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Fuse F1
+U 1 1 605425D0
+P 2950 3400
+F 0 "F1" V 2753 3400 50  0000 C CNN
+F 1 "Fuse" V 2844 3400 50  0000 C CNN
+F 2 "Fuse:Fuse_0603_1608Metric_Castellated" V 2880 3400 50  0001 C CNN
+F 3 "~" H 2950 3400 50  0001 C CNN
+	1    2950 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7050 2800 7550 2800
+Connection ~ 7050 2800
+Wire Wire Line
+	7050 3450 7550 3450
+Connection ~ 7050 3450
+Connection ~ 7050 4200
+$Comp
+L Device:D D4
+U 1 1 604B8BFF
+P 7550 3100
+F 0 "D4" V 7504 3180 50  0000 L CNN
+F 1 "S1A" V 7595 3180 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 7550 3100 50  0001 C CNN
+F 3 "~" H 7550 3100 50  0001 C CNN
+	1    7550 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D3
+U 1 1 604B971A
+P 6600 2400
+F 0 "D3" H 6600 2617 50  0000 C CNN
+F 1 "S1A" H 6600 2526 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 6600 2400 50  0001 C CNN
+F 3 "~" H 6600 2400 50  0001 C CNN
+	1    6600 2400
+	1    0    0    -1  
+$EndComp
+Connection ~ 7550 2800
+Wire Wire Line
+	7550 2800 8100 2800
+Connection ~ 7550 3450
+Wire Wire Line
+	7550 3450 8100 3450
+$Comp
+L Device:CP C7
+U 1 1 604BEDF0
+P 8100 3100
+F 0 "C7" H 8218 3146 50  0000 L CNN
+F 1 "22uF" H 8218 3055 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-15_Kemet-W" H 8138 2950 50  0001 C CNN
+F 3 "~" H 8100 3100 50  0001 C CNN
+	1    8100 3100
+	1    0    0    -1  
+$EndComp
+Connection ~ 8100 2800
+Wire Wire Line
+	8100 2800 8550 2800
+Connection ~ 8100 3450
+Wire Wire Line
+	8100 3450 8550 3450
+$Comp
+L Device:D D7
+U 1 1 604C1E95
+P 7600 4550
+F 0 "D7" V 7554 4630 50  0000 L CNN
+F 1 "S1A" V 7645 4630 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 7600 4550 50  0001 C CNN
+F 3 "~" H 7600 4550 50  0001 C CNN
+	1    7600 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D6
+U 1 1 604C2576
+P 6600 3850
+F 0 "D6" H 6600 4067 50  0000 C CNN
+F 1 "S1A" H 6600 3976 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 6600 3850 50  0001 C CNN
+F 3 "~" H 6600 3850 50  0001 C CNN
+	1    6600 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4200 7050 3850
+$Comp
+L Device:CP C8
+U 1 1 604C9178
+P 8100 4550
+F 0 "C8" H 8218 4596 50  0000 L CNN
+F 1 "22uF" H 8218 4505 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-15_Kemet-W" H 8138 4400 50  0001 C CNN
+F 3 "~" H 8100 4550 50  0001 C CNN
+	1    8100 4550
+	1    0    0    -1  
+$EndComp
+Connection ~ 8100 4200
+$Comp
+L Device:R R2
+U 1 1 604CD2D7
+P 8500 4350
+F 0 "R2" H 8430 4304 50  0000 R CNN
+F 1 "200" H 8430 4395 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8430 4350 50  0001 C CNN
+F 3 "~" H 8500 4350 50  0001 C CNN
+	1    8500 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D8
+U 1 1 604D4B61
+P 8500 4650
+F 0 "D8" V 8539 4532 50  0000 R CNN
+F 1 "LED" V 8448 4532 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 8500 4650 50  0001 C CNN
+F 3 "~" H 8500 4650 50  0001 C CNN
+	1    8500 4650
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9050 4900
+Wire Wire Line
+	9050 4900 9700 4900
+Connection ~ 9700 4900
+Wire Wire Line
+	9700 4900 10350 4900
+$Comp
+L Diode_Bridge:ABS2 D2
+U 1 1 604A5FA9
+P 4650 4200
+F 0 "D2" H 4994 4246 50  0000 L CNN
+F 1 "ABS2" H 5000 4150 50  0000 L CNN
+F 2 "Diode_SMD:Diode_Bridge_Diotec_ABS" H 4800 4325 50  0001 L CNN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/abs2.pdf" H 4650 4200 50  0001 C CNN
+	1    4650 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 4200 4200 4900
+Wire Wire Line
+	5350 4400 5350 4200
+Wire Wire Line
+	5350 4700 5350 4900
+Wire Wire Line
+	5850 4400 5850 4200
+Connection ~ 6200 4200
+Wire Wire Line
+	6200 4200 6300 4200
+Wire Wire Line
+	5850 4700 5850 4900
+Wire Wire Line
+	6600 4500 6600 4900
+Wire Wire Line
+	6200 3850 6200 4200
+Wire Wire Line
+	6600 4900 7050 4900
+Wire Wire Line
+	7050 4200 7050 4400
+Wire Wire Line
+	7050 4700 7050 4900
+Connection ~ 7050 4900
+Wire Wire Line
+	7050 4900 7600 4900
+Wire Wire Line
+	7050 4200 7600 4200
+Wire Wire Line
+	7600 4400 7600 4200
+Connection ~ 7600 4200
+Wire Wire Line
+	7600 4200 8100 4200
+Wire Wire Line
+	7600 4700 7600 4900
+Connection ~ 7600 4900
+Wire Wire Line
+	7600 4900 8100 4900
+Wire Wire Line
+	8100 4700 8100 4900
+Connection ~ 8100 4900
+Wire Wire Line
+	8100 4900 8500 4900
+Wire Wire Line
+	8100 4200 8100 4400
+Wire Wire Line
+	4200 2800 4350 2800
+Wire Wire Line
+	4200 2800 4200 3450
+Wire Wire Line
+	7050 2800 7050 2950
+Wire Wire Line
+	7550 2800 7550 2950
+Wire Wire Line
+	8100 2800 8100 2950
+Wire Wire Line
+	8100 3250 8100 3450
+Wire Wire Line
+	7550 3250 7550 3450
+Wire Wire Line
+	7050 3250 7050 3450
+Wire Wire Line
+	6600 3100 6600 3450
+Wire Wire Line
+	5850 2950 5850 2800
+Connection ~ 6200 2800
+Wire Wire Line
+	5850 3250 5850 3450
+Wire Wire Line
+	5350 3250 5350 3450
+Wire Wire Line
+	5350 2950 5350 2800
+$Comp
+L Device:R R1
+U 1 1 60526C19
+P 8550 2950
+F 0 "R1" H 8480 2904 50  0000 R CNN
+F 1 "200" H 8480 2995 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8480 2950 50  0001 C CNN
+F 3 "~" H 8550 2950 50  0001 C CNN
+	1    8550 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 60527409
+P 8550 3250
+F 0 "D5" V 8589 3132 50  0000 R CNN
+F 1 "LED" V 8498 3132 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 8550 3250 50  0001 C CNN
+F 3 "~" H 8550 3250 50  0001 C CNN
+	1    8550 3250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3100 3400 3200 3400
+Wire Wire Line
+	2800 3400 2550 3400
+Wire Wire Line
+	6200 2800 6200 2400
+Wire Wire Line
+	6200 2400 6450 2400
+Wire Wire Line
+	7050 2800 7050 2400
+Wire Wire Line
+	7050 2400 6750 2400
+Wire Wire Line
+	4000 2450 4000 3200
+Wire Wire Line
+	7050 3850 6750 3850
+Wire Wire Line
+	6450 3850 6200 3850
+Wire Wire Line
+	4000 3500 4650 3500
+Wire Wire Line
+	4650 3500 4650 3100
+Wire Wire Line
+	8500 4800 8500 4900
+Wire Wire Line
+	4950 4200 5350 4200
+Wire Wire Line
+	4200 4900 5350 4900
+Wire Wire Line
+	8550 3400 8550 3450
+Wire Wire Line
+	4950 2800 5350 2800
+Wire Wire Line
+	4200 3450 5350 3450
+Wire Wire Line
+	8550 2800 9050 2800
+Connection ~ 8550 2800
+Wire Wire Line
+	8550 3450 9050 3450
+Connection ~ 8550 3450
+Wire Wire Line
+	8500 4900 9050 4900
+Connection ~ 8500 4900
+Wire Wire Line
+	8100 4200 8500 4200
+Connection ~ 8500 4200
+Wire Wire Line
+	8500 4200 9050 4200
+Connection ~ 5350 4200
+Connection ~ 5350 4900
+Connection ~ 5850 4200
+Wire Wire Line
+	5850 4200 6200 4200
+Connection ~ 5850 4900
+Wire Wire Line
+	5350 4200 5850 4200
+Wire Wire Line
+	5350 4900 5850 4900
+Wire Wire Line
+	5850 4900 6600 4900
+Connection ~ 5350 2800
+Connection ~ 5350 3450
+Connection ~ 5850 2800
+Wire Wire Line
+	5850 2800 6200 2800
+Connection ~ 5850 3450
+Wire Wire Line
+	5850 3450 6600 3450
+Wire Wire Line
+	5350 3450 5850 3450
+Wire Wire Line
+	5350 2800 5850 2800
+Text Label 2600 3400 0    50   ~ 0
+L
+Text Label 2600 3800 0    50   ~ 0
+N
+Wire Wire Line
+	2550 3800 3200 3800
+$Comp
+L Device:Transformer_1P_2S_pinout T1
+U 1 1 6048A320
+P 3600 3600
+F 0 "T1" H 3600 4181 50  0000 C CNN
+F 1 "Transformer_1P_2S" H 3600 4090 50  0000 C CNN
+F 2 "Transformer_THT:Transformer_TSZZ45_010M_5_INDEL" H 3600 3600 50  0001 C CNN
+F 3 "~" H 3600 3600 50  0001 C CNN
+	1    3600 3600
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
